@@ -1,77 +1,127 @@
-# stayVista-starter-template
-
-- [Live Site](https://stayvista-live.web.app/)
-
-### Important Links:
 
 
-- [StayVista Part 1](https://github.com/shakilahmedatik/b9-stayVista-part1)
-- [StayVista Part 2](https://github.com/shakilahmedatik/b9-stayVista-part2)
-- [StayVista Part 3](https://github.com/shakilahmedatik/b9-stayVista-part3)
-- [StayVista Part 4 (Complete)](https://github.com/shakilahmedatik/b9-stayVista-part4)
-- [StayVista Resources](https://github.com/shakilahmedatik/b9-stayVista-resources)
-- [Project Requirement Doc](https://docs.google.com/document/d/1rzueKvZTinMb3XY7cuDNH0S0d_l8CflG1H95VUi2Dto/edit?usp=sharing)
+# 🧑‍💼 Employee Management System (MREN Stack)
 
-  
-## Topics Covered in each session:
+A full-featured Employee Management System built using the **MREN stack**: MongoDB, React.js, Express.js, and Node.js. This system helps companies manage employee data efficiently — with full CRUD operations, search, filtering, and optional features like file upload and PDF/Excel export.
 
-**Part 1 (17/05/2024):**
-- Introduction & Project overview.
-- Starter Template Setup
-- Setup MongoDB and upload fake json data in MongoDB.
-- Setup server side & define get route for fetching all rooms data from db.
-- Category Filter section in Homepage.
-- TanStack Query Implementation.
-- Room Details Page.
-- react-date-range package implementation in Room Details Page.
-- Registration Page & Functionality.
-- Image upload using api (IMGBB).
-- Login Page & Functionality.
+---
 
+## 🚀 Features
 
-**Part 2 (20/05/2024):**
-- Dashboard Layout
-- Add Room Page setup and functionality implement.
-- My Listings Page setup and functionality implement.
-- Save Registered users info in db.
-- Become a host api request implement.
-- Calendar issue fix in Room Details Page.
+- ✅ Add new employees
+- 📋 View a list of all employees
+- ✏️ Update employee details
+- ❌ Delete employees
+- 🔍 Search and filter employee data
+- 📅 Calculate expiry date (e.g. ID/Iqama)
+- 📄 Download data as Excel or PDF (optional)
+- 📸 Upload photo (via imgbb API) (optional)
+- 🔐 Admin login (optional)
 
-**Part 3 (24/05/2024):**
-- useRole Hook.
-- Profile Page.
-- Manage Users Page.
-- Sidebar modifications.
-- Secure client and server routes.
-- Become a host Button functionality.
-- Booking modal and routes in dasboard.
+---
 
-**Part 4 (28/05/2024):**
-- Payment system (Stripe).
-- Email Sending (NodeMailer).
-- Statistics Page in Dashboard.
-- Update Room Functionality.
+## 🧱 Tech Stack
 
-### Packages and api docs used in this project:
+| Tech        | Use                  |
+|-------------|----------------------|
+| MongoDB     | Database             |
+| Express.js  | REST API backend     |
+| React.js    | Frontend UI          |
+| Node.js     | Runtime              |
+| Mongoose    | MongoDB ORM          |
+| Axios       | HTTP requests        |
+| Tailwind CSS / Daisy UI | Styling  |
 
-- [Stripe Website](https://stripe.com/)
-- [Stripejs Github](https://github.com/stripe/react-stripe-js)
-- [Stripejs Documentation](https://docs.stripe.com/payments/quickstart)
-- [@stripe/react-stripe-js](https://www.npmjs.com/package/@stripe/react-stripe-js)
-- [Resend Email](https://resend.com/home)
-- [@headlessui/react](https://www.npmjs.com/package/@headlessui/react)
-- [IMGBB Api](https://api.imgbb.com/)
-- [@tanstack/react-query](https://www.npmjs.com/package/@tanstack/react-query)
-- [axios](https://www.npmjs.com/package/axios)
-- [date-fns](https://www.npmjs.com/package/date-fns)
-- [query-string](https://www.npmjs.com/package/query-string)
-- [react-date-range](https://www.npmjs.com/package/react-date-range)
-- [react-helmet-async](https://www.npmjs.com/package/react-helmet-async)
-- [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
-- [react-icons](https://www.npmjs.com/package/react-icons)
-- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
-- [react-spinners](https://www.npmjs.com/package/react-spinners)
-- [@stripe/stripe-js](https://www.npmjs.com/package/@stripe/stripe-js)
-- [firebase](https://www.npmjs.com/package/firebase)
-- [react-google-charts](https://www.react-google-charts.com/examples/line-chart)
-# Employee-Management-Full-System-project-MREN-stack-4012
+---
+
+## 🗃️ Project Structure
+
+```
+├── client/             # React frontend
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       └── App.jsx
+└── server/             # Node + Express backend
+    ├── models/
+    ├── routes/
+    ├── controllers/
+    └── server.js
+```
+
+---
+
+## 📦 Installation & Setup
+
+### ⚙️ Backend Setup
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+Make sure MongoDB is running on `mongodb://localhost:27017/employeesDB` or set up a `.env` for your custom DB URI.
+
+### 🌐 Frontend Setup
+
+```bash
+cd client
+npm install
+npm start
+```
+
+This will start the React app on `http://localhost:3000`.
+
+---
+
+## 📂 API Endpoints (Sample)
+
+| Method | Endpoint             | Description        |
+|--------|----------------------|--------------------|
+| GET    | `/api/employees`     | Get all employees  |
+| POST   | `/api/employees`     | Create employee    |
+| GET    | `/api/employees/:id` | Get one employee   |
+| PUT    | `/api/employees/:id` | Update employee    |
+| DELETE | `/api/employees/:id` | Delete employee    |
+
+---
+
+## 🔐 Environment Variables (Backend)
+
+Create a `.env` file in the `server/` folder:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/employeesDB
+IMGBB_API_KEY=your_imgbb_api_key_here
+```
+
+---
+
+## 🧪 Future Enhancements
+
+- 👥 Role-based admin access
+- 📊 Dashboard with statistics and charts
+- 📧 Email reminders for expiring IDs
+- 🌐 Multi-language support
+
+---
+
+## 📸 Screenshot (optional)
+
+_Add a screenshot of the UI here._
+
+---
+
+## 🧑‍💻 Author
+
+- **Your Name**
+- GitHub: [your-github-username](https://github.com/your-github-username)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
